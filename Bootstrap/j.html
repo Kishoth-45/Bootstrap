@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%; /* Adjust as needed for desired animation length */
+    background-image: url('image1.jpg'), url('image2.jpg'), url('image3.jpg'); /* Add multiple images */
+    background-size: cover;
+    animation: move-up 10s linear infinite; /* Adjust animation duration and timing function */
+}
+
+@keyframes move-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 50px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="background-animation">
+    <div class="content">
+        <img src="dj rock.jpeg" alt="">
+        <img src="dj rock.jpeg" alt="">
+        <img src="dj rock.jpeg" alt="">
+    </div>
+</div>
+</body>
+</html>
